@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link for routing
-import Navbar from '../navbar';
-import './intro.css';
-import photo1 from './linjat.jpg';
-import photo2 from './airplane.jpg';
-import photo3 from './kutia.jpg';
+import Navbar from '../navbar'; // Import Navbar component
+import './intro.css'; // Import specific CSS styling for this component
+import photo1 from './linjat.jpg'; // Image for Orari dhe Linjat
+import photo2 from './airplane.jpg'; // Image for Linjat e Aeroportit
+import photo3 from './kutia.jpg'; // Image for Kutia e Ankesave
 
 const Intro = () => {
+  // Define the sections with their corresponding images, titles, descriptions, and links
   const sections = [
     {
       img: photo1,
@@ -24,7 +25,7 @@ const Intro = () => {
       img: photo3,
       title: 'Kutia e Ankesave',
       description: 'Kontaktoni për pyetje ose ankesa.',
-      link: '/ankesa',
+      link: '/KutiaAnkesave',
     },
   ];
 
@@ -36,6 +37,7 @@ const Intro = () => {
           <h1>Udhëto shpejtë dhe komod me Trafikun Urban</h1>
         </header>
         <div className="sections-grid">
+          {/* Map through each section and create a link for it */}
           {sections.map((section, index) => (
             <Link to={section.link} key={index} className="section-item">
               <img src={section.img} alt={section.title} className="section-img" />

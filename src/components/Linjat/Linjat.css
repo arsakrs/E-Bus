@@ -1,0 +1,65 @@
+/* Linjat.css */
+.bus-routes-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.bus-route {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bus-line {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.bus-destination {
+  font-size: 1rem;
+  color: #555;
+  text-align: right;
+  flex-grow: 1;
+}
+
+.bus-route:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .bus-routes-container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .bus-route {
+    padding: 10px 15px;
+  }
+
+  .bus-line {
+    font-size: 1.1rem;
+  }
+
+  .bus-destination {
+    font-size: 0.9rem;
+  }
+}
