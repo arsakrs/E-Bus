@@ -1,0 +1,116 @@
+/* Stilet për faqen kryesore */
+.booking-page {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+.header {
+  background-color: #0056b3;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.header h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+/* Seksioni promo (Udhëto shpejt dhe komod me Trafikun urban) */
+.promo-banner {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.promo-banner h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.promo-banner p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Grid i seksioneve kryesore */
+.sections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.section-item {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.section-item:hover {
+  transform: translateY(-5px);
+}
+
+.section-img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.section-description {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Përgjigje për ekranet më të vogla */
+@media (max-width: 768px) {
+  .sections-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .promo-banner {
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  .promo-banner h2 {
+    font-size: 20px;
+  }
+
+  .promo-banner p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sections-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .promo-banner h2 {
+    font-size: 18px;
+  }
+
+  .promo-banner p {
+    font-size: 12px;
+  }
+}

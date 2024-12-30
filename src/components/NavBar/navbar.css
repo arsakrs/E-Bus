@@ -1,0 +1,119 @@
+/* Navbar Styles */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between; /* Align left and right items */
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 1000;
+  background: rgb(12, 12, 71); /* Set background color */
+}
+
+/* Logo and Emblem styling */
+.navbar-left, .navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px; /* Adjust logo size */
+  margin-right: 20px;
+}
+
+.emblem {
+  height: 40px; /* Adjust emblem size */
+  margin-left: 20px;
+}
+
+/* Styling for title text in e-bus info */
+.ebus-info h1 {
+  color: yellow;
+  font-size: 50px;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Desktop Menu Styles */
+.desktopMenu {
+  display: flex;
+  gap: 1rem; /* Adjust space between items */
+}
+
+.desktopMenuListItem {
+  margin: 0 1rem;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+/* Mobile Menu Icon */
+.mobileMenuIcon {
+  display: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Navigation Menu (mobile) */
+.navMenu {
+  display: none;
+}
+
+.navMenu.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* List items in mobile view */
+.listItem {
+  margin: 0.5rem 0;
+  color: white;
+  text-decoration: none;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  /* Hide desktop menu and show mobile menu icon */
+  .desktopMenu {
+    display: none;
+  }
+
+  .mobileMenuIcon {
+    display: block;
+  }
+
+  /* Position mobile menu below the navbar */
+  .navMenu {
+    position: absolute;
+    top: 5rem; /* Adjust position from top */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    transform: translateY(-100%); /* Hide the menu initially */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navMenu.show {
+    transform: translateY(0); /* Show the menu when active */
+  }
+
+  /* Styling for the list items in mobile view */
+  .listItem {
+    margin: 0.5rem 0;
+    color: white;
+    text-decoration: none;
+  }
+}
